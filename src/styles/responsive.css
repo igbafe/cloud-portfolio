@@ -1,0 +1,95 @@
+@media (max-width: 840px) {
+  .nav-inner { gap: 12px; }
+  .brand { min-width: 180px; }
+  .nav-links { gap: 12px; }
+  .theme-toggle-label { display: none; }
+  .nav-contact { padding: 8px; }
+}
+
+@media (max-width: 1020px) {
+  .hero-layout { grid-template-columns: minmax(0, 1fr) minmax(280px, .78fr); gap: 42px; }
+  .hero-copy h1 { font-size: clamp(64px, 9vw, 94px); }
+  .brand { min-width: 215px; }
+  .brand-role { display: none; }
+  .project-card { padding: 16px; }
+  .project-links { gap: 8px 12px; }
+  .contact-panel { gap: 36px; }
+}
+
+@media (max-width: 760px) {
+  .container, .nav-inner { width: min(100% - 36px, var(--content)); }
+  .section { padding: 68px 0 74px; }
+  .section-heading-main { display: block; }
+  .section-heading h2 { max-width: 600px; font-size: clamp(27px, 7vw, 36px); }
+  .section-intro { margin-top: 12px; }
+  .section-heading { margin-bottom: 27px; }
+  .nav-inner { min-height: 62px; gap: 10px; }
+  .brand { min-width: 0; }
+  .brand-name { font-size: 12px; }
+  .nav-actions { margin-left: auto; }
+  .nav-contact { display: none; }
+  .theme-toggle { min-height: 38px; }
+  .theme-toggle-label { display: none; }
+  .menu-toggle { display: inline-flex; }
+  .nav-links { position: absolute; top: calc(100% - 1px); right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 18px 14px; border-bottom: 1px solid var(--line); background: var(--mobile-nav-glass); }
+  .nav-links.is-open { display: flex; flex-direction: column; }
+  .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--mobile-menu-border); }
+  .nav-links a:last-child { border: 0; }
+  .hero-section, .hero-inner { min-height: auto; }
+  .hero-inner { padding-top: 53px; padding-bottom: 63px; }
+  .hero-layout { grid-template-columns: 1fr; gap: 36px; }
+  .hero-kicker { margin-top: 25px; }
+  .hero-copy h1 { font-size: clamp(68px, 17vw, 98px); }
+  .hero-copy h2 { margin-top: 18px; }
+  .hero-summary { max-width: 600px; font-size: 14px; }
+  .hero-metrics { margin-top: 28px; }
+  .metric-tile { min-height: 64px; padding: 10px; }
+  .metric-value { font-size: 18px; }
+  .metric-label { font-size: 7px; }
+  .hero-visual { width: min(100%, 385px); justify-self: center; }
+  .hero-scroll { bottom: 18px; }
+  .projects-grid { grid-template-columns: 1fr; gap: 13px; }
+  .project-card { padding: 17px; }
+  .project-copy h3 { font-size: 24px; }
+  .project-summary { min-height: 0; }
+  .project-diagram img { height: 260px; }
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .skill-card { min-height: 150px; padding: 12px; }
+  .skill-card h3 { font-size: 14px; }
+  .experience-item { grid-template-columns: 38px minmax(0, 1fr); }
+  .experience-node { width: 27px; height: 27px; }
+  .experience-card { padding: 16px; }
+  .experience-highlights { grid-template-columns: 1fr; gap: 8px; }
+  .experience-header h3 { font-size: 16px; }
+  .education-grid { grid-template-columns: 1fr; gap: 9px; }
+  .contact-panel { grid-template-columns: 1fr; gap: 30px; padding: 25px 20px; }
+  .contact-copy h2 { font-size: 36px; }
+  .footer-inner { grid-template-columns: 1fr auto; gap: 12px 18px; padding-block: 15px; }
+  .footer-inner > p { order: 2; }
+  .back-to-top { justify-self: end; }
+  .footer-inner > small { justify-self: end; }
+}
+
+@media (max-width: 420px) {
+  .container, .nav-inner { width: calc(100% - 30px); }
+  .hero-actions { gap: 8px; }
+  .hero-actions .button { min-height: 42px; padding-inline: 11px; font-size: 11px; }
+  .hero-github { margin-left: 0; }
+  .hero-metrics { grid-template-columns: repeat(3, 1fr); }
+  .metric-tile { padding-inline: 7px; }
+  .metric-value { font-size: 16px; }
+  .metric-label { font-size: 6px; }
+  .availability-tag { font-size: 8px; }
+  .project-diagram img { height: 220px; }
+  .card-topline .eyebrow { font-size: 7px; }
+  .project-marker { font-size: 6px; }
+  .skill-card { min-height: 160px; }
+  .experience-company span { display: block; margin-top: 3px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 10px; }
+  .back-to-top, .footer-inner > small { justify-self: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}

@@ -1,0 +1,63 @@
+:root[data-theme="light"] {
+  color-scheme: light;
+  color: #172930;
+  background: #f5f8f9;
+  --canvas: #f5f8f9;
+  --surface: #ffffff;
+  --surface-raised: #edf2f3;
+  --surface-hover: #e6eef0;
+  --line: #d6e0e3;
+  --line-strong: #b9c9ce;
+  --text: #172930;
+  --text-muted: #52646d;
+  --text-dim: #687b83;
+  --cyan: #007983;
+  --cyan-soft: #086a73;
+  --green: #167751;
+  --amber: #965800;
+  --text-contrast: #ffffff;
+  --canvas-alt: #edf3f4;
+  --canvas-deep: #f7f9fa;
+  --hero-canvas: #edf3f4;
+  --footer-canvas: #e8eef0;
+  --header-glass: rgba(247, 249, 250, .94);
+  --mobile-nav-glass: rgba(247, 249, 250, .99);
+  --mobile-menu-border: rgba(25, 50, 57, .13);
+  --panel-color: #f4f8f9;
+  --panel-deep: #f1f5f6;
+  --panel-blue: #e7eff1;
+  --panel-node: #e7f0f1;
+  --text-soft: #43565e;
+  --text-faint: #6d7e86;
+  --text-fainter: #7a8b92;
+  --text-head-muted: #36535b;
+  --text-hero: #4b6068;
+  --text-secondary: #637981;
+  --text-quiet: #687b83;
+  --text-code: #63777f;
+  --text-heading: #263d44;
+  --hairline: rgba(30, 53, 60, .13);
+  --header-line: rgba(30, 53, 60, .2);
+  --grid-line: rgba(28, 77, 85, .12);
+  --photo-overlay: rgba(5, 9, 13, .86);
+  --accent-glow: rgba(0, 121, 131, .14);
+  --status-glow: rgba(22, 119, 81, .27);
+  --status-ping: rgba(22, 119, 81, .25);
+  --status-clear: rgba(22, 119, 81, 0);
+  --availability-bg: rgba(255, 255, 255, .76);
+  --metric-bg: rgba(255, 255, 255, .82);
+  --card-gradient: linear-gradient(145deg, #ffffff, #f2f6f7);
+  --card-gradient-hover: linear-gradient(145deg, #ffffff, #edf4f5);
+  --experience-gradient: linear-gradient(110deg, #ffffff, #f2f6f7);
+  --contact-gradient: radial-gradient(ellipse at 0% 0%, rgba(0, 121, 131, .06), transparent 45%), #f7fafb;
+  --card-shadow: 0 18px 55px rgba(28, 54, 61, .1);
+  --portrait-border: #aebfc4;
+}
+
+:root[data-theme="light"] .nav-links { color: var(--text-muted); }
+:root[data-theme="light"] .site-header { box-shadow: 0 2px 18px rgba(24, 47, 54, .04); }
+:root[data-theme="light"] .hero-grid-bg { opacity: .42; }
+:root[data-theme="light"] .brand-dot { box-shadow: 0 0 9px rgba(0, 121, 131, .32); }
+:root[data-theme="light"] .status-dot,
+:root[data-theme="light"] .status-pulse { box-shadow: 0 0 8px rgba(22, 119, 81, .23); }
+:root[data-theme="light"] .portrait-frame::after { background: linear-gradient(transparent, rgba(5, 9, 13, .86)); }
