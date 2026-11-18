@@ -1,73 +1,79 @@
-# Peter Igbafe — Cloud Engineer Portfolio
+# Peter Igbafe | Cloud Engineer Portfolio
 
-A responsive, single-page portfolio introducing Peter Igbafe's cloud engineering work, technical skills, professional experience, and education. It is designed to let visitors scan the profile, explore detailed project write-ups and source repositories, then get in touch.
+A responsive, single-page portfolio for Peter Igbafe, a cloud engineer based in Lagos, Nigeria. It introduces his background, presents two cloud engineering case studies, summarizes his skills and experience, and makes it easy to get in touch.
 
-## Explore the site
+The portfolio is one continuous page with anchor links, not a set of separate routes. The AWS and Kubernetes technologies described in the project cards belong to those case studies; the portfolio website itself is built with React, JavaScript, Vite, and CSS.
 
-The page is arranged as a guided scroll from introduction to contact:
+## Guide to the site
 
-1. **Home** — The opening section summarizes Peter's focus and links directly to selected work, email, and GitHub.
-2. **Work** — Two featured cloud projects include architecture diagrams, implementation highlights, technology tags, and links to project notes and code. Select a diagram to open it at full size.
-   - **AWS K3s Cluster with Terraform** — A self-managed Kubernetes platform on EC2, with ingress, TLS, and GitOps delivery.
-   - **E-commerce Platform on AWS** — A 24-service delivery workflow covering image builds, AWS infrastructure, Kubernetes deployment, and observability.
-3. **Stack** — Skills are grouped into cloud, infrastructure as code, containers and delivery, Linux and web, networking, and development.
-4. **Experience** — A timeline of cloud engineering, software development, and IT support roles.
-5. **Education & certification** — Engineering degree and front-end development certificate.
-6. **Contact** — Email, phone, GitHub, and LinkedIn links, followed by a back-to-top link.
+| Section | What you'll find | How to get there |
+| --- | --- | --- |
+| **Home** | Peter's introduction, cloud engineering focus, quick links to work, email, and GitHub | Brand name in the header, or scroll to the top |
+| **Projects** | Architecture, implementation highlights, technology tags, project notes, and repositories | **Work** in the header, or **Explore my work** in the introduction |
+| **Technical stack** | Skills grouped across cloud, infrastructure as code, containers and delivery, Linux and web, networking, and development | **Stack** in the header |
+| **Experience** | A timeline of cloud engineering, software development, and IT support roles | **Experience** in the header |
+| **Education** | Computer engineering degree and front-end development certificate | Continue down the page after Experience |
+| **Contact** | Email, phone, GitHub, LinkedIn, and location | **Contact** or **Let's Talk** in the header, or the contact buttons |
 
-Use the header links to jump to **Work**, **Stack**, **Experience**, or **Contact**. The brand name returns to the top. On narrow screens, open the menu button to reach the same navigation links. The **Let's Talk** button and contact links provide direct ways to connect. The theme switch changes between light and dark modes; the initial theme follows the device preference, and a manual choice is remembered in the browser.
+The header stays visible while scrolling. On smaller screens, use the menu button to open the same navigation links. The theme switch changes between light and dark appearance. On a first visit, the page follows the device color preference; after you change it, your choice is saved in the browser.
+
+## Featured projects
+
+- **AWS K3s Cluster with Terraform** — A self-managed Kubernetes platform on AWS EC2. The case study covers Terraform-managed infrastructure, K3s server and worker nodes, NGINX ingress, certificate management, and Argo CD for GitOps delivery.
+- **E-commerce Platform on AWS** — A three-stage delivery workflow for a 24-service application: build and publish container images, provision the AWS platform, then deploy through Kubernetes and Argo CD. Links include an overview, documentation for each stage, and the application, infrastructure, and Kubernetes repositories.
+
+Each project card includes an architecture diagram. Select the diagram to open its full-size image in a new tab. Project documentation and repository links also open in a new tab.
 
 ## Technologies used to build this site
 
-- **React 18** — Renders the page as reusable components and sections.
-- **JavaScript (ES modules)** — Holds the UI behavior and portfolio data.
-- **Vite 6** — Development server and production build tool.
-- **CSS** — Custom styles, design tokens, responsive layouts, theme colors, and reduced-motion support; no CSS framework is used.
-- **Intersection Observer** — Reveals content as it enters the viewport, with a fallback for browsers that do not support it.
-- **Browser APIs** — `localStorage` remembers the theme, and `prefers-color-scheme` selects the initial theme.
-- **Google Fonts** — Space Grotesk and JetBrains Mono.
-
-The AWS, Terraform, Kubernetes, and observability technologies listed in the project cards describe the featured cloud projects, not the implementation stack of this portfolio website.
+| Technology | How it is used |
+| --- | --- |
+| **React 18** and **React DOM** | Build the interface from reusable components and page sections. |
+| **JavaScript (ES modules)** | Implement the page behavior and hold the portfolio content. |
+| **Vite 6** | Run the local development server and create the production build. |
+| **CSS** | Define design tokens, page layout, responsive behavior, light and dark themes, animations, and reduced-motion support. No CSS framework is used. |
+| **Intersection Observer** | Reveal content as it enters the viewport, with a fallback when the browser does not support the API. |
+| **Browser APIs** | `matchMedia` reads the system color preference; `localStorage` remembers the selected theme. |
+| **Google Fonts** | Load Space Grotesk and JetBrains Mono for the site's typography. |
 
 ## Run locally
 
-You will need Node.js and npm installed.
+Install [Node.js](https://nodejs.org/) and npm, then run these commands from the project folder:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite in your terminal. To create and preview a production build:
+Open the local URL printed by Vite. To build the production files and preview that build locally:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Update portfolio content
+## Update the portfolio
 
-- Edit profile details, project descriptions and links, skill groups, work history, and education in `src/data/portfolio.js`.
-- Update section layouts and content rendering in `src/sections/`.
-- Update shared interface elements, such as project cards and navigation, in `src/components/`.
-- Adjust design tokens, theme styles, page layout, and responsive behavior in `src/styles/`.
-- Replace or add project diagrams in `public/architecture/` and update their paths in `src/data/portfolio.js`.
-- Replace the portrait at `profile-pic.PNG` to change the hero image.
+- Edit the profile, project descriptions and links, skills, experience, and education in `src/data/portfolio.js`.
+- Change the page sections in `src/sections/` and shared interface elements such as navigation or project cards in `src/components/`.
+- Adjust colors, typography, layout, theme behavior, and responsive styles in `src/styles/`.
+- Replace architecture images in `public/architecture/` and update the image path and alternative text in `src/data/portfolio.js`.
+- Replace `profile-pic.PNG` to change the portrait.
 
 ## Project structure
 
 ```text
 .
 ├── public/
-│   ├── architecture/       # Featured project diagrams
+│   ├── architecture/       # Project architecture diagrams
 │   └── favicon.svg
 ├── src/
-│   ├── components/         # Shared UI components
-│   ├── data/               # Portfolio content
-│   ├── sections/           # Page sections
+│   ├── components/         # Shared interface components
+│   ├── data/               # Portfolio content and links
+│   ├── sections/           # Sections displayed on the page
 │   ├── styles/             # Global, layout, theme, and responsive CSS
-│   ├── App.jsx             # Page composition
-│   └── main.jsx            # React entry point
+│   ├── App.jsx              # Assembles the page
+│   └── main.jsx             # React entry point
 ├── profile-pic.PNG
 ├── index.html
 ├── package.json
